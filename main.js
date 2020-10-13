@@ -30,20 +30,18 @@ client.on('message', message =>{
     const args = message.content.slice(prefix.length).split(/ + /);
     const command = args.shift().toLowerCase();
 
-    if(command === 'ping'){
+    if(command === "is","%"){
+        client.commands.get('is').execute(message, args);
+    }
+    else if(command === 'ping'){
         client.commands.get('ping').execute(message, args);
     } 
     else if(command === 'uwu'){
         client.commands.get('uwu').execute(message, args);
     }
-    else if(command === n,"%"){
-        var random_number = Math.floor(Math.random() * 3);
-        if(random_number == 2){
-            message.channel.send('negative.');
-        }else if(random_number == 1){
-            message.channel.send('affirmative.');
-    }}
-
+    else if(command === 'help'){
+        client.commands.get('help').execute(message, args);
+    }
 })
 
 client.login('');
