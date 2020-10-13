@@ -30,10 +30,7 @@ client.on('message', message =>{
     const args = message.content.slice(prefix.length).split(/ + /);
     const command = args.shift().toLowerCase();
 
-    if(command === "is","%"){
-        client.commands.get('is').execute(message, args);
-    }
-    else if(command === 'ping'){
+    if(command === 'ping'){
         client.commands.get('ping').execute(message, args);
     } 
     else if(command === 'uwu'){
@@ -41,6 +38,9 @@ client.on('message', message =>{
     }
     else if(command === 'help'){
         client.commands.get('help').execute(message, args);
+    }
+    else if(command === "is","%"){
+        client.commands.get('is').execute(message, args);
     }
 })
 

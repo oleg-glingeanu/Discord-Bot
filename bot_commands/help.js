@@ -7,8 +7,8 @@ module.exports = {
     }
 }
 
-const htmlString = `Help Menu
+const htmlString = `*Help Menu*
 - is
--ping
--uwu
+- ping
+- uwu
 `
